@@ -8,15 +8,22 @@
     <script src="components/home/home.js"></script>
     <script src="components/one/one.js"></script>
     <script src="components/two/two.js"></script>
+
+    <style>
+      ng-viewport > * {
+        border: 1px solid;
+        padding: 10px;
+      }
+    </style>
   </head>
 
-  <body ng-app="app" ng-controller="AppController">
+  <body ng-app="app" ng-controller="AppController as app">
     <ul>
       <li>
-        <a router-link="home">Home</a>
+        <a ng-link="home">Home</a>
       </li>
     </ul>
 
-    <router-view-port></router-view-port>
+    <ng-viewport></ng-viewport>
   </body>
 </html>
